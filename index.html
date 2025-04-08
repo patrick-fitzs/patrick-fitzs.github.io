@@ -56,20 +56,7 @@
       background-color: cadetblue;
     }
 
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #1e1e1e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      animation: fadeOut 1s ease forwards;
-      animation-delay: 3.8s;
-    }
+
 
     @keyframes fadeOut {
       to {
@@ -108,9 +95,10 @@
   <div id="particles-js"></div>
 
   <!-- Loader -->
-  <div id="loader">
-    <span class="typewriter-text">Website under (constant) construction.</span>
-  </div>
+<div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] animate-fadeOut delay-[3800ms]">
+  <span class="typewriter-text text-lg sm:text-xl md:text-2xl">Website under (constant) construction.</span>
+</div>
+
 
   <!-- Side Nav -->
   <nav class="fixed top-0 left-4 h-screen flex flex-col items-center z-[999] pt-4">
