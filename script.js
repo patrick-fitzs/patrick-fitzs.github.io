@@ -1,6 +1,5 @@
-// Wait for DOM to fully load before running anything
 document.addEventListener("DOMContentLoaded", () => {
-  // Tags for the animated sphere
+  // Animate Tag Sphere
   const myTags = [
     'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB',
     'Python', 'Java', 'SQL', 'Bootstrap', 'UML', 'Git', 'GitHub',
@@ -8,10 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     'Pandas', 'Matplotlib', 'SciPy'
   ];
 
-  // Grab the sphere container
   const container = document.getElementById("skillSphere");
 
-  // Ensure the container exists and has visible size
   if (container && container.offsetWidth > 0 && container.offsetHeight > 0) {
     TagCloud("#skillSphere", myTags, {
       radius: 300,
@@ -23,17 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("SkillSphere container not found or has 0 size.");
   }
-})
 
-window.addEventListener('DOMContentLoaded', () => {
+  // Loader logic
+  const loader = document.getElementById('loader');
   setTimeout(() => {
-    const loader = document.getElementById('loader');
     if (loader) {
       loader.classList.add('opacity-0', 'pointer-events-none');
-      setTimeout(() => loader.remove(), 500); // fully remove after fade
+      setTimeout(() => loader.remove(), 500);
     }
   }, 3800);
 });
-
-
-;

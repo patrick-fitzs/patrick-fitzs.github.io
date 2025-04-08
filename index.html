@@ -59,12 +59,6 @@
 
 
 
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
 
     /* Nav Icon Glow Effect */
     .nav-icon {
@@ -97,9 +91,10 @@
 
 
   <!-- Loader -->
-  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999]">
+  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] transition-opacity duration-500">
     <span class="typewriter-text text-lg sm:text-xl md:text-2xl">Website under (constant) construction.</span>
   </div>
+
 
 
 
