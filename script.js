@@ -23,4 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("SkillSphere container not found or has 0 size.");
   }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => loader.remove(), 500); // fully remove after fade
+    }
+  }, 3800);
 });
+
+
+;

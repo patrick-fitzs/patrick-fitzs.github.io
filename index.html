@@ -23,6 +23,10 @@
       scroll-behavior: smooth;
       color: black;
     }
+    #loader {
+      transition: opacity 0.5s ease;
+    }
+
 
     .typewriter-text {
       overflow: hidden;
@@ -94,10 +98,12 @@
   <!-- Background -->
   <div id="particles-js"></div>
 
+
   <!-- Loader -->
-<div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] animate-fadeOut delay-[3800ms]">
-  <span class="typewriter-text text-lg sm:text-xl md:text-2xl">Website under (constant) construction.</span>
-</div>
+  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999]">
+    <span class="typewriter-text text-lg sm:text-xl md:text-2xl">Website under (constant) construction.</span>
+  </div>
+
 
 
   <!-- Side Nav -->
