@@ -29,4 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => loader.remove(), 500);
     }
   }, 3800);
+
+  AOS.init(); // animation happens on all scroll
+
 });
