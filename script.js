@@ -33,3 +33,4 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init(); // animation happens on all scroll
 
 });
+
