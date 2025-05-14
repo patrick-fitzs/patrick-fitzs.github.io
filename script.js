@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Animate Tag Sphere
   const myTags = [
-    'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB',
+    'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Flask', 'MongoDB',
     'Python', 'Java', 'SQL', 'Bootstrap', 'UML', 'Git', 'GitHub',
     'Machine Learning', 'TensorFlow', 'PyTorch', 'NumPy',
-    'Pandas', 'Matplotlib', 'SciPy'
+    'Pandas', 'Matplotlib', 'SciPy', 'Sklearn'
   ];
 
   const container = document.getElementById("skillSphere");
