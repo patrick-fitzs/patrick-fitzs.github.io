@@ -270,10 +270,10 @@
 <!-- connect section -->
   <section id="contact" class="pl-12 md:pl-20 min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
-    <form class="w-full max-w-lg space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
-      <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
-      <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required></textarea>
+    <form id="contact-form" class="w-full max-w-lg space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
+      <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required></textarea>
       <button type="submit" class="bg-[#00ffe7] text-black px-6 py-3 rounded hover:bg-white transition">Send Message</button>
     </form>
   </section>
@@ -286,6 +286,9 @@
   <script src="particles-config.js"></script>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="contact.js"></script>
+
 
 
 
