@@ -19,7 +19,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 
-  <!-- Custom Styles -->
+  <!---------- Custom Styles ---------->
   <style>
     body {
       font-family: 'JetBrains Mono', monospace !important;
@@ -78,7 +78,7 @@
 
     /* View Repo Styling */
     .view-repo {
-      color: #333;
+      color: wheat;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -86,6 +86,33 @@
     .view-repo:hover {
       text-decoration: underline;
     }
+
+    /*Settings for skills sphere*/
+    #skillSphere {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+  #skillSphere {
+    transform: scale(0.75); /* shrink to 75% */
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 480px) {
+  #skillSphere {
+    transform: scale(0.7); /* smaller for mobile */
+  }
+}
+
+
+
   </style>
 </head>
 
@@ -100,21 +127,32 @@
   </div>
 
 
+  <!-- SIDE NAV LEFT ICONS-->
+<nav class="fixed top-0 left-2 h-screen flex flex-col items-center justify-between z-[999]">
+  <!-- PF logo pinned at top -->
+  <div class="text-gray-400 text-sm font-bold mt-4">PF</div>
+
+  <!-- Icons vertically centered in remaining space -->
+  <div class="flex flex-col items-center space-y-4 my-auto">
+
+    <a href="#intro" title="Top of page">
+      <img src="imgdumpster/home-page-svgrepo-com.svg" alt="House" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
+    </a>
+    <a href="#sidestep" title="Interests">
+      <img src="imgdumpster/coding-svgrepo-com.svg" alt="Chevron" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
+    </a>
+    <a href="#skills-experience" title="Experience">
+      <img src="imgdumpster/skill.png" alt="skill icons" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
+    </a>
+    <a href="#projects" title="Projects">
+      <img src="imgdumpster/project.png" alt="projects" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
+    </a>
+  </div>
+</nav>
 
 
-  <!-- Side Nav -->
-  <nav class="fixed top-0 left-4 h-screen flex flex-col items-center z-[999] pt-4">
-    <div class="text-gray-400 text-sm font-bold">PF</div>
-    <div class="flex flex-col items-center mt-72 space-y-4">
-      <a href="#intro" title="Top of page" class="nav-icon text-gray-400 text-2xl">🏠</a>
-      <a href="#sidestep" title="Interests" class="nav-icon text-gray-400 text-2xl">🧠</a>
-      <a href="#skills-experience" title="Experience" class="nav-icon text-gray-400 text-2xl">💻</a>
-      <a href="#projects" title="Projects" class="nav-icon text-gray-400 text-2xl">📬</a>
-    </div>
-  </nav>
-
-  <!-- Floating Social Icons -->
-  <div class="fixed top-1/2 right-5 -translate-y-1/2 flex flex-col space-y-2">
+  <!-- FLOATING ICONS RIGHT LinkedIN AND GIT -->
+  <div class="fixed top-1/2 right-3 -translate-y-1/2 flex flex-col space-y-2">
     <a href="https://github.com/patrick-fitzs" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-8 h-8 invert hover:scale-110 transition-transform"/>
     </a>
@@ -124,7 +162,7 @@
   </div>
 
   <!-- CV Button -->
-  <div class="fixed top-5 right-5 z-[1000] group">
+  <div class="fixed top-3 right-3 z-[1000] group">
     <a href="imgdumpster/PatrickCV2025_04.pdf" download class="relative inline-block bg-gray-800 p-3 rounded-full shadow-md hover:scale-110 transition-transform">
       <img src="imgdumpster/resume.gif" alt="CV Icon" class="w-9 h-9 rounded-full object-cover" />
       <span class="absolute top-1/2 right-[120%] transform -translate-y-1/2 bg-black text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
@@ -133,15 +171,23 @@
     </a>
   </div>
 
+
+
+  <!-- START OF MAIN CONTENT --->
+
+
+
+
+
   <!-- Sections -->
-  <section id="intro" class="min-h-screen flex flex-col justify-center items-center px-6 pt-16 text-center snap-start text-[#e0e0e0]">
+  <section id="intro" class="pl-12 md:pl-20 min-h-screen flex flex-col justify-center items-center px-6 pt-16 text-center snap-start text-[#e0e0e0]">
     <h1 class="text-4xl font-bold mb-4">Welcome!</h1>
     <p>Hello, my name is Patrick.</p>
     <p>This is my personal portfolio website.</p>
     <p>Still a work in progress...</p>
   </section>
 
-  <section id="sidestep" class="min-h-screen flex flex-col justify-center items-center px-6 text-center snap-start text-[#e0e0e0]">
+  <section id="sidestep" class="pl-12 md:pl-20 min-h-screen flex flex-col justify-center items-center px-6 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-4">What I like to do in my spare time</h2>
     <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank">
       <img src="imgdumpster/leetcode.svg" alt="leetcode" class="w-12 h-12 hover:scale-110 transition-transform" />
@@ -159,14 +205,14 @@
   </section>
 
 <!-- SKILLS AND EXPERIENCE -->
-<section id="skills-experience" class="min-h-screen snap-start px-10 py-20 flex items-center justify-center font-['JetBrains_Mono'] text-[#e0e0e0]">
+<section id="skills-experience" class="pl-12 md:pl-20 min-h-screen snap-start px-10 py-20 flex items-center justify-center lg:text-left text-center font-['JetBrains_Mono'] text-[#e0e0e0]">
   <div class="flex flex-wrap lg:flex-nowrap gap-12 w-full max-w-7xl">
     <!-- LEFT: TEXT -->
     <div class="flex-1">
       <h2 class="text-4xl font-bold mb-6">Skills and Experience</h2>
-      <p class="mb-4">I have experience through personal projects with both frontend and backend development.</p>
-      <p class="mb-4">From building responsive web apps with React and Flask, to developing ML models using TensorFlow and PyTorch.</p>
-      <p class="mb-4">I’m comfortable working with SQL/NoSQL databases, DevOps tools like Docker/Kubernetes, and cloud platforms like AWS.</p>
+      <p class="mb-4">I have experience through personal projects with both frontend and backend development, along with an internship consisting of development with data collection and AI search tool development.</p>
+      <p class="mb-4">From building responsive web apps with Tailwind Flask, to developing ML models using TensorFlow and PyTorch.</p>
+      <p class="mb-4">I’m comfortable working with SQL/NoSQL databases, DevOps tools like Docker, and cloud platforms like AWS.</p>
       <p class="mb-4">I love writing clean, scalable code and solving problems efficiently — whether it's a UI layout or an algorithm in LeetCode.</p>
     </div>
 
@@ -176,25 +222,25 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="min-h-screen px-6 py-12 text-center snap-start font-['JetBrains_Mono'] text-[#e0e0e0]">
+<section id="projects" class="pl-8 md:pl-20 pr-8 md:pr-24 min-h-screen px-6 py-12 text-center snap-start font-['JetBrains_Mono'] text-[#e0e0e0]">
   <h2 class="text-3xl font-bold mb-6">My Projects</h2>
 
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start">
 
       <!-- Project 1 -->
       <div class="bg-[#1e1e1e] rounded-2xl p-6 shadow-md hover:scale-[1.02] transition-transform group" data-aos="fade-up">
-        <img src="imgdumpster/project-preview.png" class="w-full h-40 object-cover rounded-md mb-4" alt="League of Legends">
+        <img src="imgdumpster/league-of-legends-logo-font-download-856x484.jpg" class="w-full aspect-[16/9] object-cover rounded-md mb-4" alt="League of Legends">
         <h3 class="text-xl font-semibold">League of Legends Predictor</h3>
         <div class="hidden group-hover:block mt-4 text-sm">
-          <p>Predicts win/loss based on player stats like kills, gold, CS, and assists.</p>
+          <p class="italic">Predicts win/loss based on player stats like kills, gold, CS, and assists.</p>
           <a href="https://github.com/patrick-fitzs/League_Of_Legends_Predictor" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
         </div>
       </div>
 
       <!-- Project 2 -->
       <div class="bg-[#1e1e1e] rounded-2xl p-6 shadow-md hover:scale-[1.02] transition-transform group" data-aos="fade-up" data-aos-delay="100">
-        <img src="imgdumpster/news.png" class="w-full h-40 object-cover rounded-md mb-4" alt="News summary">
+        <img src="imgdumpster/Barrons-Logo-Block-Color.png" class="w-full aspect-[16/9] object-cover rounded-md mb-4" alt="News summary">
         <h3 class="text-xl font-semibold">Barron's Article Summariser</h3>
         <div class="hidden group-hover:block mt-4 text-sm">
           <p class="italic">Summarises finance news every morning using NLP. Matches it with stock movement data.</p>
@@ -205,10 +251,10 @@
 
       <!-- Project 3 -->
       <div class="bg-[#1e1e1e] rounded-2xl p-6 shadow-md hover:scale-[1.02] transition-transform group" data-aos="fade-up" data-aos-delay="200">
-        <img src="imgdumpster/mlmatrix.png" class="w-full h-40 object-cover rounded-md mb-4" alt="Confusion Matrix">
+        <img src="imgdumpster/mlmatrix.png" class="w-full aspect-[16/9] object-cover rounded-md mb-4" alt="Confusion Matrix">
         <h3 class="text-xl font-semibold">Neural Network</h3>
         <div class="hidden group-hover:block mt-4 text-sm">
-          <p>A deep learning model for tumour detection. Uses 20+ features and achieves 95% accuracy.</p>
+          <p class="italic">A deep learning model for tumour detection. Uses 20+ features and achieves 95% accuracy.</p>
           <div class="flex justify-center gap-3 mt-2">
             <img src="imgdumpster/mlloss.png" class="w-24 h-16 object-cover rounded" alt="Loss Curve">
             <img src="imgdumpster/mlmatrix.png" class="w-24 h-16 object-cover rounded" alt="Matrix Small">
@@ -222,7 +268,7 @@
 </section>
 
 <!-- connect section -->
-  <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center snap-start text-[#e0e0e0]">
+  <section id="contact" class="pl-12 md:pl-20 min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
     <form class="w-full max-w-lg space-y-4">
       <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />

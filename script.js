@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (container && container.offsetWidth > 0 && container.offsetHeight > 0) {
     TagCloud("#skillSphere", myTags, {
-      radius: 300,
-      maxSpeed: "fast",
+      radius: 230,
+      maxSpeed: "normal",
       initSpeed: "normal",
       direction: 135,
       keep: true,
