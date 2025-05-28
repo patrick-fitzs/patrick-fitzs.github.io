@@ -32,23 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   AOS.init(); // animation happens on all scroll
 
-  // Hamburger toggle
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('slideOutMenu');
 
-  if (btn && menu) {
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('-translate-x-full');
-      menu.classList.toggle('translate-x-0');
-    });
-
-    // Close menu when any link is clicked
-    const links = menu.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('-translate-x-full');
-        menu.classList.remove('translate-x-0');
-      });
-    });
-  }
 });
