@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hamburger toggle
   const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('mobileMenu');
+  const menu = document.getElementById('slideOutMenu');
 
   if (btn && menu) {
     btn.addEventListener('click', () => {
