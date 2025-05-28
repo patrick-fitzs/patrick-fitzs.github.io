@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (container && container.offsetWidth > 0 && container.offsetHeight > 0) {
     TagCloud("#skillSphere", myTags, {
-      radius: 230,
+      radius: 250,
       maxSpeed: "normal",
       initSpeed: "normal",
       direction: 135,
@@ -32,4 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   AOS.init(); // animation happens on all scroll
 
+  // Hamburger toggle
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('-translate-x-full');
+      menu.classList.toggle('translate-x-0');
+    });
+
+    // Close menu when any link is clicked
+    const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('-translate-x-full');
+        menu.classList.remove('translate-x-0');
+      });
+    });
+  }
 });

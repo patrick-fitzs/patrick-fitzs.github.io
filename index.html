@@ -21,6 +21,11 @@
 
   <!---------- Custom Styles ---------->
   <style>
+
+      html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
     body {
       font-family: 'JetBrains Mono', monospace !important;
       scroll-snap-type: y mandatory;
@@ -123,42 +128,75 @@
 
   <!-- Loader -->
   <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] transition-opacity duration-500">
-    <span class="typewriter-text text-lg sm:text-xl md:text-2xl">Website under (constant) construction.</span>
+    <span class="typewriter-text text-sm sm:text-sm md:text-2xl">Website under (constant) construction.</span>
   </div>
+
+  <!-- Mobile Hamburger -->
+<div class="fixed top-4 left-4 z-[1000]">
+  <button id="hamburgerBtn" class="text-white focus:outline-none">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Mobile Slide-Out Nav -->
+<div id="mobileMenu" class=" fixed top-0 left-0 w-48 md:w-56 h-full bg-[#1e1e1e] text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-[999] p-6 pt-20 space-y-6">
+  <a href="#intro" class="block py-2 hover:text-[#00ffe7]">Home</a>
+  <a href="#sidestep" class="block py-2 hover:text-[#00ffe7]">Interests</a>
+  <a href="#skills-experience" class="block py-2 hover:text-[#00ffe7]">Experience</a>
+  <a href="#projects" class="block py-2 hover:text-[#00ffe7]">Projects</a>
+  <a href="#contact" class="block py-2 hover:text-[#00ffe7]">Contact</a>
+</div>
+
+
 
 
   <!-- SIDE NAV LEFT ICONS-->
-<nav class="fixed top-0 left-2 h-screen flex flex-col items-center justify-between z-[999]">
-  <!-- PF logo pinned at top -->
-  <div class="text-gray-400 text-sm font-bold mt-4">PF</div>
+<!--<nav class="hidden sm:flex fixed top-0 left-2 h-screen flex-col items-center justify-between z-[999]">-->
+<!--  &lt;!&ndash; PF logo pinned at top &ndash;&gt;-->
+<!--  <div class="text-gray-400 text-sm font-bold mt-4">PF</div>-->
 
-  <!-- Icons vertically centered in remaining space -->
-  <div class="flex flex-col items-center space-y-4 my-auto">
+<!--  &lt;!&ndash; Icons vertically centered in remaining space &ndash;&gt;-->
+<!--  <div class="flex flex-col items-center space-y-4 my-auto">-->
 
-    <a href="#intro" title="Top of page">
-      <img src="imgdumpster/home-page-svgrepo-com.svg" alt="House" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
-    </a>
-    <a href="#sidestep" title="Interests">
-      <img src="imgdumpster/coding-svgrepo-com.svg" alt="Chevron" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
-    </a>
-    <a href="#skills-experience" title="Experience">
-      <img src="imgdumpster/skill.png" alt="skill icons" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
-    </a>
-    <a href="#projects" title="Projects">
-      <img src="imgdumpster/project.png" alt="projects" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>
-    </a>
-  </div>
-</nav>
+<!--    <a href="#intro" title="Top of page">-->
+<!--      <img src="imgdumpster/home-page-svgrepo-com.svg" alt="House" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
+<!--    </a>-->
+<!--    <a href="#sidestep" title="Interests">-->
+<!--      <img src="imgdumpster/coding-svgrepo-com.svg" alt="Chevron" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
+<!--    </a>-->
+<!--    <a href="#skills-experience" title="Experience">-->
+<!--      <img src="imgdumpster/skill.png" alt="skill icons" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
+<!--    </a>-->
+<!--    <a href="#projects" title="Projects">-->
+<!--      <img src="imgdumpster/project.png" alt="projects" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</nav>-->
 
 
   <!-- FLOATING ICONS RIGHT LinkedIN AND GIT -->
-  <div class="fixed top-1/2 right-3 -translate-y-1/2 flex flex-col space-y-2">
+
+  <div class="fixed top-1/2 right-3 -translate-y-1/2 flex flex-col space-y-5">
+
+    <div class="relative group">
     <a href="https://github.com/patrick-fitzs" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-8 h-8 invert hover:scale-110 transition-transform"/>
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-8 h-8 invert hover:scale-125 transition-transform"/>
     </a>
-    <a href="https://www.linkedin.com/in/patrick-fitzsimons-243012253/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-8 h-8 hover:scale-110 transition-transform"/>
-    </a>
+      <span class = "absolute right-10 top-1/2 -translate-y-1/2 bg-grey text-white text-s px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+        Github
+      </span>
+    </div>
+
+    <div class="relative group">
+      <a href="https://www.linkedin.com/in/patrick-fitzsimons-243012253/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-8 h-8 hover:scale-125 transition-transform"/>
+      </a>
+      <span class = "absolute right-10 top-1/2 -translate-y-1/2 bg-grey text-white text-s px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+        LinkedIn
+      </span>
+    </div>
   </div>
 
   <!-- CV Button -->
@@ -180,14 +218,20 @@
 
 
   <!-- Sections -->
-  <section id="intro" class="pl-12 md:pl-20 min-h-screen flex flex-col justify-center items-center px-6 pt-16 text-center snap-start text-[#e0e0e0]">
-    <h1 class="text-4xl font-bold mb-4">Welcome!</h1>
-    <p>Hello, my name is Patrick.</p>
-    <p>This is my personal portfolio website.</p>
-    <p>Still a work in progress...</p>
-  </section>
+  <!-- INTRO -->
+<section id="intro" class="min-h-screen flex flex-col justify-center items-center text-center px-14 sm:px-20 md:px-32 text-[#e0e0e0]">
+  <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInDown">Welcome!</h1>
+  <div class="relative z-10 max-w-2xl text-base md:text-lg">
+    <p class="mb-4">Hi, my name's Patrick and this is my personal portfolio website.</p>
+    <p class="mb-4">This is a project that I'm constantly changing and fine-tuning because... well, I enjoy it. I'm currently studying a BSc of Data Science and Computing [Year 2] and also undergoing an internship as an AI Software Developer.</p>
+    <p class="mb-4">The realisation that this field is one big beautiful paradox—the more I learn, the vaster the unknown becomes. This is a massive draw for me, and I'm guessing many devs out there feel the same.</p>
+    <p class="italic">Work in progress...</p>
+  </div>
+</section>
 
-  <section id="sidestep" class="pl-12 md:pl-20 min-h-screen flex flex-col justify-center items-center px-6 text-center snap-start text-[#e0e0e0]">
+
+
+  <section id="sidestep" class="min-h-screen flex flex-col justify-center items-center px-14 sm:px-20 md:px-32 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-4">What I like to do in my spare time</h2>
     <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank">
       <img src="imgdumpster/leetcode.svg" alt="leetcode" class="w-12 h-12 hover:scale-110 transition-transform" />
@@ -205,15 +249,15 @@
   </section>
 
 <!-- SKILLS AND EXPERIENCE -->
-<section id="skills-experience" class="pl-12 md:pl-20 min-h-screen snap-start px-10 py-20 flex items-center justify-center lg:text-left text-center font-['JetBrains_Mono'] text-[#e0e0e0]">
+<section id="skills-experience" class="min-h-screen snap-start px-14 sm:px-20 md:px-32 py-20 flex items-center justify-center lg:text-left text-center font-['JetBrains_Mono'] text-[#e0e0e0]">
   <div class="flex flex-wrap lg:flex-nowrap gap-12 w-full max-w-7xl">
     <!-- LEFT: TEXT -->
     <div class="flex-1">
       <h2 class="text-4xl font-bold mb-6">Skills and Experience</h2>
-      <p class="mb-4">I have experience through personal projects with both frontend and backend development, along with an internship consisting of development with data collection and AI search tool development.</p>
-      <p class="mb-4">From building responsive web apps with Tailwind Flask, to developing ML models using TensorFlow and PyTorch.</p>
-      <p class="mb-4">I’m comfortable working with SQL/NoSQL databases, DevOps tools like Docker, and cloud platforms like AWS.</p>
-      <p class="mb-4">I love writing clean, scalable code and solving problems efficiently — whether it's a UI layout or an algorithm in LeetCode.</p>
+      <p class="mb-4">I've gained hands-on experience through a mix of personal projects and an AI focused internship, working across both frontend and backend stacks.</p>
+      <p class="mb-4">I've built responsive web apps using Flask and Tailwind, developed ML models with TensorFlow and Pytorch, and created intelligent tools like AI chatbots powered by the OpenAI ChatGPT API</p>
+      <p class="mb-4">My backend work includes building and containerising web scraping tools with Python and Docker, using APIs (Google, Yahoo Finance, etc.) and integrating data pipelines with SQL and NoSQL (MongoDB via Atlas)</p>
+      <p class="mb-4">I've also hosted full stack apps on platforms like Heroku and versioned everything with Git and GitHub. Whether its building scalable infrastructure or solving Leetcode problems, i love writing clean, efficient and delivering real results.</p>
     </div>
 
     <!-- RIGHT: SPHERE -->
@@ -267,8 +311,8 @@
   </div>
 </section>
 
-<!-- connect section -->
-  <section id="contact" class="pl-12 md:pl-20 min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center snap-start text-[#e0e0e0]">
+<!-- CONNECT FORM -->
+  <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-14 sm:px-20 md:px-32 py-12 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
     <form id="contact-form" class="w-full max-w-lg space-y-4">
       <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
@@ -277,6 +321,16 @@
       <button type="submit" class="bg-[#00ffe7] text-black px-6 py-3 rounded hover:bg-white transition">Send Message</button>
     </form>
   </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="flex flex-col items-center justify-center px-6 py-4">
+      <div class="flex items-center space-x-4">
+        All rights reserved I guess ?
+      </div>
+    </div>
+  </footer>
 
 
 
