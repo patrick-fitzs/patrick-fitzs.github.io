@@ -47,4 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init(); // animation happens on all scroll
 
 
+  new Splide('.splide', {
+    type   : 'loop',
+    perPage: 3,
+    gap    : '2rem',
+    autoplay: true,
+    interval: 4500,    // time in ms between slides
+    pauseOnHover: true,
+    pagination: true,
+    arrows: false,
+    breakpoints: {
+      640: { perPage: 1 },
+      1024: { perPage: 2 },
+      1280: { perPage: 3 },
+    },
+  }).mount();
+
 });
+
+

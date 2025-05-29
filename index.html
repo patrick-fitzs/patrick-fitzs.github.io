@@ -7,6 +7,10 @@
   <title>Patrick's Portfolio</title>
 
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
@@ -113,6 +117,8 @@
 
 
   </style>
+
+
 </head>
 
 <body class="bg-[#0f0f0f] text-[#e0e0e0]">
@@ -121,9 +127,9 @@
 
 
    <!-- LOADER -->
-  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] transition-opacity duration-500">
-    <span class="typewriter-text text-sm sm:text-sm md:text-2xl">Website under (constant) construction.</span>
-  </div>
+<!--  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] transition-opacity duration-500">-->
+<!--    <span class="typewriter-text text-sm sm:text-sm md:text-2xl">Website under (constant) construction.</span>-->
+<!--  </div>-->
 
   <!-- HAMBURGER MENU -->
 <div class="fixed top-4 left-4 z-[1000]">
@@ -351,6 +357,60 @@
     </div>
 </section>
 
+
+
+
+<!-- CERTIFICATE BELT -->
+<section id="certificates" class="w-full py-16 flex flex-col items-center bg-[#181818]">
+  <h2 class="text-3xl font-bold mb-10 text-[#00ffe7]">Certificates</h2>
+  <div class="w-full max-w-4xl">
+    <div class="splide" aria-label="Certificates">
+      <div class="splide__track">
+        <div class="splide__progress w-full h-1 bg-[#1e1e1e] rounded">
+          <div class="splide__progress__bar bg-[#00ffe7] h-1 rounded">
+          </div>
+        </div>
+        <ul class="splide__list">
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/python_hackerrank_cert.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python HackerRank</div>
+            <a href="" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/genAI_LLM.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Generative AI and LLMs</div>
+            <a href="https://coursera.org/share/a119faaedd095eedbbef2c305b5b5a51" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/intro_NN.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Intro to Neural Networks (PyTorch)</div>
+            <a href="https://coursera.org/share/4172f8ef208fec35070e27ef270411d8" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/Db_SQL.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Databases and SQL for Data Science</div>
+            <a href="https://coursera.org/share/2a91e25e49e1d4060c54b5748e35eacc" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/pp_ds.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python Project for Data Science</div>
+            <a href="https://coursera.org/share/ef4efb610ddca59c816acfad05500d4a" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+          <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
+            <img src="imgdumpster/pdsai.png" class="w-44 h-32 object-contain mb-3"/>
+            <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python for Data Science, AI & Development</div>
+            <a href="https://coursera.org/share/672c25978c0118f228048631493ec9df" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <!-- CONNECT FORM -->
   <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-14 sm:px-20 md:px-32 py-12 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
@@ -363,14 +423,34 @@
   </section>
 
 
+
+
+
+
+
   <!-- FOOTER -->
-  <footer>
-    <div class="flex flex-col items-center justify-center px-6 py-4">
-      <div class="flex items-center space-x-4">
-        All rights reserved I guess ?
-      </div>
-    </div>
-  </footer>
+<footer class="bg-black w-full py-6 flex flex-col items-center justify-center">
+  <div class="flex gap-6 mb-2">
+    <a href="https://github.com/patrick-fitzs" target="_blank" title="GitHub">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-7 h-7 invert hover:scale-110 transition" />
+    </a>
+    <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank" title="LeetCode">
+      <img src="imgdumpster/leetcode.svg" class="w-7 h-7 hover:scale-110 transition" />
+    </a>
+    <a href="https://www.hackerrank.com/your_handle" target="_blank" title="HackerRank">
+      <img src="imgdumpster/hackerrank.svg" class="w-7 h-7 hover:scale-110 transition" />
+    </a>
+    <a href="https://www.codewars.com/users/your_handle" target="_blank" title="Codewars">
+      <img src="imgdumpster/codewars.svg" class="w-7 h-7 hover:scale-110 transition" />
+    </a>
+    <!-- Add more as needed -->
+  </div>
+  <span class="text-[#777] text-xs">&copy; 2025 Patrick Fitzsimons. All rights reserved.</span>
+</footer>
+
+
+
+
 
 
   <!-------------------- JS STUFF -------------------->
