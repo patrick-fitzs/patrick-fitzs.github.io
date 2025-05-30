@@ -36,8 +36,10 @@
         z-index:9999;
         font-family: 'JetBrains Mono', monospace;
         font-size:2rem;
-        letter-spacing:2px;">
+        letter-spacing:2px;
+        transition: opacity 0.5s;
       }
+
     body {
       font-family: 'JetBrains Mono', monospace !important;
       scroll-snap-type: y mandatory;
@@ -108,7 +110,8 @@
   <!-- BACKGROUND -->
   <div id="particles-js"></div>
   <!-- LOADER -->
-  <div id="loaderStyle" class="loaderStyle">
+
+  <div id="loaderStyle">
       <span id="decode-text"></span>
   </div>
 
