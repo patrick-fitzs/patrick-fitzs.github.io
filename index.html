@@ -106,6 +106,9 @@
 
   </style>
 </head>
+
+
+<!-- START OF BODY -->
 <body class="bg-[#0f0f0f] text-[#e0e0e0]">
   <!-- BACKGROUND -->
   <div id="particles-js"></div>
@@ -235,23 +238,29 @@
   <h2 class="text-3xl font-bold mb-6">My Projects</h2>
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start">
+
       <!-- Project 1 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
           <img src="imgdumpster/league-of-legends-logo-font-download-856x484.jpg" class="w-full h-full object-cover rounded-md" alt="League of Legends">
-          <!-- Overlay -->
           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
             <p class="italic mb-3">Predicts win/loss based on player stats like kills, gold, CS, and assists.</p>
             <a href="https://github.com/patrick-fitzs/League_Of_Legends_Predictor" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
           </div>
         </div>
         <h3 class="text-xl font-semibold mt-5">League of Legends Predictor</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">PyTorch</span>
+          <span class="bg-blue-500 text-white font-bold px-2 py-0.5 rounded text-xs">scikit-learn</span>
+          <span class="bg-gray-700 text-white font-bold px-2 py-0.5 rounded text-xs">Matplotlib</span>
+        </div>
       </div>
+
       <!-- Project 2 -->
       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
           <img src="imgdumpster/Barrons-Logo-Block-Color.png" class="w-full h-full object-cover rounded-md" alt="News summary">
-          <!-- Overlay -->
           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
             <p class="italic">Summarises finance news every morning using NLP. Matches it with stock movement data.</p>
             <p>**IN PROGRESS**</p>
@@ -259,58 +268,94 @@
           </div>
         </div>
         <h3 class="text-xl font-semibold mt-5">Barron's Article Summariser</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-purple-500 text-white font-bold px-2 py-0.5 rounded text-xs">NLP</span>
+          <span class="bg-yellow-300 text-black font-bold px-2 py-0.5 rounded text-xs">Pandas</span>
+        </div>
       </div>
+
       <!-- Project 3 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
-         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
-           <img src="imgdumpster/mlmatrix.png" class="w-full h-full object-cover rounded-md" alt="Confusion Matrix">
-           <!-- Overlay -->
-           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
-          <p class="italic">A deep learning model for tumour detection. Uses 20+ features and achieves 95% accuracy.</p>
-          <a href="https://github.com/patrick-fitzs/NeuralNetwork" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+        <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
+          <img src="imgdumpster/mlmatrix.png" class="w-full h-full object-cover rounded-md" alt="Confusion Matrix">
+          <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
+            <p class="italic">A deep learning model for tumour detection. Uses 20+ features and achieves 95% accuracy.</p>
+            <a href="https://github.com/patrick-fitzs/NeuralNetwork" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+          </div>
         </div>
-         </div>
-         <h3 class="text-xl font-semibold mt-5">Neural Network</h3>
-       </div>
+        <h3 class="text-xl font-semibold mt-5">Neural Network</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-yellow-300 text-black font-bold px-2 py-0.5 rounded text-xs">Pandas</span>
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">PyTorch</span>
+          <span class="bg-yellow-300 text-black font-bold px-2 py-0.5 rounded text-xs">scikit-learn</span>
+          <span class="bg-gray-700 text-white font-bold px-2 py-0.5 rounded text-xs">Matplotlib</span>
+
+        </div>
+      </div>
+
       <!-- Project 4 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
-         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
-           <img src="imgdumpster/openai.png" class="w-full h-full object-cover rounded-md" alt="OpenAI Logo">
-           <!-- Overlay -->
-           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
-          <p class="italic">An AI Chat bot build leveraging OpenAIs API. A Flask application deployed on Heroku</p>
-          <a href="https://github.com/patrick-fitzs/AIChatBotV2" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+        <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
+          <img src="imgdumpster/openai.png" class="w-full h-full object-cover rounded-md" alt="OpenAI Logo">
+          <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
+            <p class="italic">An AI Chat bot build leveraging OpenAIs API. A Flask application deployed on Heroku</p>
+            <a href="https://github.com/patrick-fitzs/AIChatBotV2" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+          </div>
         </div>
-       </div>
-         <h3 class="text-xl font-semibold"> AI Chat Bot</h3>
-       </div>
+        <h3 class="text-xl font-semibold mt-5">AI Chat Bot</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-gray-700 text-white font-bold px-2 py-0.5 rounded text-xs">Flask</span>
+          <span class="bg-gray-400 text-black font-bold px-2 py-0.5 rounded text-xs">OpenAI API</span>
+          <span class="bg-gray-400 text-black font-bold px-2 py-0.5 rounded text-xs">Heroku</span>
+        </div>
+      </div>
+
       <!-- Project 5 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
-         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
-           <img src="imgdumpster/MLimg.png" class="w-full h-full object-cover rounded-md" alt="Machine Learning img">
-           <!-- Overlay -->
-           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
-          <p class="italic">An array of algorithms, from LR, to Decision trees and K-Means</p>
-          <a href="https://github.com/patrick-fitzs/AIChatBotV2" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+        <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
+          <img src="imgdumpster/MLimg.png" class="w-full h-full object-cover rounded-md" alt="Machine Learning img">
+          <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
+            <p class="italic">An array of algorithms, from LR, to Decision trees and K-Means</p>
+            <a href="https://github.com/patrick-fitzs/ML_Models" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+          </div>
         </div>
-       </div>
-         <h3 class="text-xl font-semibold">Machine Learning Algorithms</h3>
-       </div>
-      <!-- Project 5 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
-         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
-           <img src="imgdumpster/apkaf.png" class="w-full h-full object-cover rounded-md" alt="Apache Kafka logo">
-           <!-- Overlay -->
-           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
-          <p class="italic">Streams rt stock prices into Apache Kafka, showing live producer-consumer messaging</p>
-          <a href="https://github.com/patrick-fitzs/AIChatBotV2" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+        <h3 class="text-xl font-semibold mt-5">Machine Learning Algorithms</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-yellow-300 text-black font-bold px-2 py-0.5 rounded text-xs">scikit-learn</span>
+          <span class="bg-yellow-200 text-black font-bold px-2 py-0.5 rounded text-xs">Pandas</span>
+          <span class="bg-yellow-200 text-black font-bold px-2 py-0.5 rounded text-xs">NumPy</span>
+          <span class="bg-yellow-200 text-black font-bold px-2 py-0.5 rounded text-xs">Sklearn</span>
         </div>
-       </div>
-         <h3 class="text-xl font-semibold">Machine Learning Algorithms</h3>
-       </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+        <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
+          <img src="imgdumpster/apkaf.png" class="w-full h-full object-cover rounded-md" alt="Apache Kafka logo">
+          <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
+            <p class="italic">Streams rt stock prices into Apache Kafka, showing live producer-consumer messaging</p>
+            <a href="NA" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold mt-5">Stock Price Streamer</h3>
+        <div class="flex flex-wrap gap-2 mt-2 mb-2 justify-center">
+          <span class="bg-orange-400 text-black font-bold px-2 py-0.5 rounded text-xs">Python</span>
+          <span class="bg-gray-700 text-white font-bold px-2 py-0.5 rounded text-xs">Apache Kafka</span>
+          <span class="bg-blue-300 text-black font-bold px-2 py-0.5 rounded text-xs">Docker</span>
+          <span class="bg-blue-300 text-black font-bold px-2 py-0.5 rounded text-xs">Finnhub API</span>
+
+        </div>
+      </div>
+
     </div>
-    </div>
+  </div>
 </section>
+
+
 
 <!-- CERTIFICATE BELT -->
 <section id="certificates" class="w-full py-16 flex flex-col items-center bg-[#181818]">
