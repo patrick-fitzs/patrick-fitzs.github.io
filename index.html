@@ -168,15 +168,34 @@
   <!-- START OF MAIN CONTENT --->
   <!-- Sections -->
   <!-- INTRO -->
-<section id="intro" class="min-h-screen flex flex-col justify-center items-center text-center px-14 sm:px-20 md:px-32 text-[#e0e0e0]">
-  <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInDown">Welcome!</h1>
-  <div class="relative z-10 max-w-2xl text-base md:text-lg">
-    <p class="mb-4">Hi, my names Patrick and this is my personal portfolio website.</p>
-    <p class="mb-4">This is a project that I'm constantly changing and fine-tuning because... well, I enjoy it. I'm currently studying a BSc of Data Science and Computing [Year 2] and also undergoing an internship as an AI Software Developer.</p>
-    <p class="mb-4">The realisation eg that this field is one big beautiful paradox—the more I learn, the vaster the unknown becomes. This is a massive draw for me, and I'm guessing many devs out there feel the same.</p>
-    <p class="italic">Work in progress...</p>
+<section id="intro" class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-10 py-12">
+  <div class="flex flex-col md:flex-row items-center gap-10 bg-gradient-to-br from-[#141e30] via-[#232323] to-[#00ffe7]/10 rounded-xl shadow-2xl p-8">
+    <img src="imgdumpster/me.png" alt="meee" class="w-44 h-44 rounded-full border-4 border-[#00ffe7] shadow-lg object-cover mb-6 md:mb-0 animate__animated animate__fadeInLeft">
+    <!-- Intro Content -->
+    <div class="max-w-xl text-left md:text-left">
+      <h1 class="text-5xl font-extrabold mb-4 text-[#00ffe7] drop-shadow-md">Hey, I'm Patrick! </h1>
+      <p class="mb-4 text-lg text-[#e0e0e0]">
+          ...and this is my personal portfolio website.
+      </p>
+      <p class="mb-4 text-[#e0e0e0]">
+        This is a project that I'm constantly changing and fine-tuning because... well, I enjoy it.
+        I'm currently studying a BSc in Data Science and Computing <span class="font-semibold text-[#00ffe7]">[Year 2]</span> and also working an internship! - <span class="font-semibold text-[#00ffe7]">[AI Software Developer intern.]</span>
+      </p>
+      <p class="mb-4 text-[#e0e0e0]">
+        A big realisation for me... is that this field is one big beautiful paradox... the more I learn, the vaster the unknown becomes. That's a massive draw for me, and I'm guessing a lot of devs out there feel the same.
+      </p>
+      <p class="italic text-[#b2ffe9] mb-2">Work in progress...</p>
+      <div class="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+        <span class="bg-[#00ffe7] text-black px-4 py-1 rounded-full font-semibold">AI (and everything tech) Enthusiast 🤖</span>
+        <span class="bg-[#18181b] border border-[#00ffe7] text-[#00ffe7] px-4 py-1 rounded-full font-semibold">Loves Coding challenges 🧑‍💻</span>
+        <span class="bg-[#232323] text-[#00ffe7] px-4 py-1 rounded-full font-semibold">Gym 🏋️ | Travel 🌏 | Foodie 🍗<span class="text-xs align-middle ml-1">(Who isn't)</span>
+        </span>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- SPARE TIME -->
   <section id="sidestep" class="min-h-screen flex flex-col justify-center items-center px-14 sm:px-20 md:px-32 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-4">What I like to do in my spare time</h2>
     <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank">
@@ -347,33 +366,41 @@
 </section>
 
 <!-- CONNECT FORM -->
-  <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-14 sm:px-20 md:px-32 py-12 text-center snap-start text-[#e0e0e0]">
-    <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
-    <form id="contact-form" class="w-full max-w-lg space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required />
-      <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded bg-[#1e1e1e] text-white" required></textarea>
-      <button type="submit" class="bg-[#00ffe7] text-black px-6 py-3 rounded hover:bg-white transition">Send Message</button>
-    </form>
-  </section>
+<section id="contact" class="min-h-screen flex flex-col items-center justify-center px-14 sm:px-20 md:px-32 py-12 text-center snap-start text-[#e0e0e0]">
+  <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
+  <form id="contact-form" class="w-full max-w-lg space-y-4 bg-[#18181b]/80 border-2 border-[#00ffe7] rounded-2xl shadow-xl p-8 backdrop-blur-md transition-transform hover:scale-105">
+    <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-[#23272f] text-white border border-[#00ffe7] focus:outline-none focus:ring-2 focus:ring-[#00ffe7]" required />
+    <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-[#23272f] text-white border border-[#00ffe7] focus:outline-none focus:ring-2 focus:ring-[#00ffe7]" required />
+    <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded bg-[#23272f] text-white border border-[#00ffe7] focus:outline-none focus:ring-2 focus:ring-[#00ffe7]" required></textarea>
+    <button type="submit" class="bg-[#00ffe7] text-black px-6 py-3 rounded hover:bg-[#03fff7] hover:scale-105 transition">Send Message</button>
+  </form>
+</section>
+
+
+
 
   <!-- FOOTER -->
 <footer class="bg-black w-full py-6 flex flex-col items-center justify-center">
   <div class="flex gap-6 mb-2">
+    <h2>Other socials here: <span class="inline-block rotate-30 text-1xl text-[#00ffe7]">➔</span>
+</h2>
     <a href="https://github.com/patrick-fitzs" target="_blank" title="GitHub">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-7 h-7 invert hover:scale-110 transition" />
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="w-7 h-7 invert hover:scale-150 transition hover:rotate-12" alt="GitHub" />
     </a>
     <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank" title="LeetCode">
-      <img src="imgdumpster/leetcode.svg" class="w-7 h-7 hover:scale-110 transition" />
+      <img src="imgdumpster/leetcode.svg" class="w-7 h-7 hover:scale-150 transition hover:-rotate-12" alt="LeetCode" />
     </a>
     <a href="https://www.hackerrank.com/profile/pf959ftw" target="_blank" title="HackerRank">
-      <img src="imgdumpster/hackerrank.svg" class="w-7 h-7 hover:scale-110 transition" />
+      <img src="imgdumpster/hackerrank.svg" class="w-7 h-7 hover:scale-150 transition hover:rotate-12" alt="HackerRank"/>
     </a>
     <a href="https://www.codewars.com/users/patrick-fitzs" target="_blank" title="Codewars">
-      <img src="imgdumpster/codewars.svg" class="w-7 h-7 hover:scale-110 transition" />
+      <img src="imgdumpster/codewars.svg" class="w-7 h-7 hover:scale-150 transition hover:-rotate-12" alt="CodeWars" />
+    </a>
+    <a href="https://www.instagram.com/patrickfitz11/" target="_blank" title="Instagram">
+      <img src="imgdumpster/Instagram_logo_2022.svg" class="w-7 h-7 hover:scale-150 transition hover:rotate-12" alt="gram"/>
     </a>
   </div>
-  <span class="text-[#777] text-xs">&copy; 2025 Patrick Fitzsimons. All rights reserved.</span>
+  <span class="text-[#777] text-s">&copy; 2025 Patrick Fitzsimons. All rights reserved, I guess.</span>
 </footer>
 
 
