@@ -24,34 +24,25 @@
     overflow-x: hidden;
     max-width: 100vw;
   }
+      #loaderStyle {
+        position:fixed;
+        top:0; left:0;
+        width:100vw; height:100vh;
+        background:#101014;
+        color:#00ffe7;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+        font-family: 'JetBrains Mono', monospace;
+        font-size:2rem;
+        letter-spacing:2px;">
+      }
     body {
       font-family: 'JetBrains Mono', monospace !important;
       scroll-snap-type: y mandatory;
       scroll-behavior: smooth;
       color: black;
-    }
-
-
-    .typewriter-text {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid #00ffe7;
-      width: 0;
-      display: inline-block;
-      color: #00ffe7;
-      font-weight: bold;
-      font-size: 32px;
-      animation: typing 3s steps(40, end) forwards, blink 0.7s step-end infinite;
-      font-family: 'JetBrains Mono', monospace !important;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 38ch }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
     }
 
     #particles-js {
@@ -63,9 +54,6 @@
       left: 0;
       background-color: #0f0f0f;
     }
-
-
-
 
     /* Nav Icon Glow Effect */
     .nav-icon {
@@ -114,22 +102,15 @@
   }
 }
 
-
-
   </style>
-
-
 </head>
-
 <body class="bg-[#0f0f0f] text-[#e0e0e0]">
   <!-- BACKGROUND -->
   <div id="particles-js"></div>
-
-
-   <!-- LOADER -->
-<!--  <div id="loader" class="fixed inset-0 bg-[#1e1e1e] flex items-center justify-center z-[9999] transition-opacity duration-500">-->
-<!--    <span class="typewriter-text text-sm sm:text-sm md:text-2xl">Website under (constant) construction.</span>-->
-<!--  </div>-->
+  <!-- LOADER -->
+  <div id="loaderStyle" class="loaderStyle">
+      <span id="decode-text"></span>
+  </div>
 
   <!-- HAMBURGER MENU -->
 <div class="fixed top-4 left-4 z-[1000]">
@@ -150,37 +131,9 @@
   <a href="#contact" class="block py-2 hover:text-[#00ffe7]">Contact</a>
 </div>
 
-
-
-
-  <!-- SIDE NAV LEFT ICONS-->
-<!--<nav class="hidden sm:flex fixed top-0 left-2 h-screen flex-col items-center justify-between z-[999]">-->
-<!--  &lt;!&ndash; PF logo pinned at top &ndash;&gt;-->
-<!--  <div class="text-gray-400 text-sm font-bold mt-4">PF</div>-->
-
-<!--  &lt;!&ndash; Icons vertically centered in remaining space &ndash;&gt;-->
-<!--  <div class="flex flex-col items-center space-y-4 my-auto">-->
-
-<!--    <a href="#intro" title="Top of page">-->
-<!--      <img src="imgdumpster/home-page-svgrepo-com.svg" alt="House" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
-<!--    </a>-->
-<!--    <a href="#sidestep" title="Interests">-->
-<!--      <img src="imgdumpster/coding-svgrepo-com.svg" alt="Chevron" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
-<!--    </a>-->
-<!--    <a href="#skills-experience" title="Experience">-->
-<!--      <img src="imgdumpster/skill.png" alt="skill icons" class="w-8 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
-<!--    </a>-->
-<!--    <a href="#projects" title="Projects">-->
-<!--      <img src="imgdumpster/project.png" alt="projects" class="w-7 h-8 hover:scale-110 hover:drop-shadow-[0_0_8px_#00ffe7] transition duration-270 ease-in-out hover:rotate-3"/>-->
-<!--    </a>-->
-<!--  </div>-->
-<!--</nav>-->
-
-
   <!-- FLOATING ICONS RIGHT LinkedIN AND GIT -->
-
+  <!--GitHub LOGO-->
   <div class="fixed top-1/2 right-3 -translate-y-1/2 flex flex-col space-y-5 z-[1000]">
-
     <div class="relative group">
     <a href="https://github.com/patrick-fitzs" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-8 h-8 invert hover:scale-125 transition-transform"/>
@@ -189,7 +142,7 @@
         Github
       </span>
     </div>
-
+    <!--LinkedIn LOGO-->
     <div class="relative group">
       <a href="https://www.linkedin.com/in/patrick-fitzsimons-243012253/" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-8 h-8 hover:scale-125 transition-transform"/>
@@ -200,7 +153,7 @@
     </div>
   </div>
 
-  <!-- CV Button -->
+  <!-- CV BUTTON -->
   <div class="fixed top-3 right-3 z-[1000] group">
     <a href="imgdumpster/PatrickCV_05_25.pdf" download class="relative inline-block bg-gray-800 p-3 rounded-full shadow-md hover:scale-110 transition-transform">
       <img src="imgdumpster/resume.gif" alt="CV Icon" class="w-9 h-9 rounded-full object-cover" />
@@ -209,15 +162,7 @@
       </span>
     </a>
   </div>
-
-
-
   <!-- START OF MAIN CONTENT --->
-
-
-
-
-
   <!-- Sections -->
   <!-- INTRO -->
 <section id="intro" class="min-h-screen flex flex-col justify-center items-center text-center px-14 sm:px-20 md:px-32 text-[#e0e0e0]">
@@ -229,9 +174,6 @@
     <p class="italic">Work in progress...</p>
   </div>
 </section>
-
-
-
   <section id="sidestep" class="min-h-screen flex flex-col justify-center items-center px-14 sm:px-20 md:px-32 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-4">What I like to do in my spare time</h2>
     <a href="https://leetcode.com/u/patrickfitzs11/" target="_blank">
@@ -269,10 +211,8 @@
 <!-- PROJECTS -->
 <section id="projects" class="pl-8 md:pl-20 pr-8 md:pr-24 min-h-screen px-6 py-12 text-center snap-start font-['JetBrains_Mono'] text-[#e0e0e0]">
   <h2 class="text-3xl font-bold mb-6">My Projects</h2>
-
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start">
-
       <!-- Project 1 -->
        <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
@@ -285,23 +225,19 @@
         </div>
         <h3 class="text-xl font-semibold mt-5">League of Legends Predictor</h3>
       </div>
-
-
-
       <!-- Project 2 -->
-       <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
-         <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
-           <img src="imgdumpster/Barrons-Logo-Block-Color.png" class="w-full h-full object-cover rounded-md" alt="News summary">
-           <!-- Overlay -->
-           <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
-             <p class="italic">Summarises finance news every morning using NLP. Matches it with stock movement data.</p>
-             <p>**IN PROGRESS**</p>
-             <a href="https://github.com/patrick-fitzs/barrons-summary" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
-           </div>
-         </div>
-          <h3 class="text-xl font-semibold mt-5">Barron's Article Summariser</h3>
+      <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
+        <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
+          <img src="imgdumpster/Barrons-Logo-Block-Color.png" class="w-full h-full object-cover rounded-md" alt="News summary">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-6 text-base md:text-lg text-center">
+            <p class="italic">Summarises finance news every morning using NLP. Matches it with stock movement data.</p>
+            <p>**IN PROGRESS**</p>
+            <a href="https://github.com/patrick-fitzs/barrons-summary" target="_blank" class="text-[#00ffe7] hover:underline">View Repo</a>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold mt-5">Barron's Article Summariser</h3>
       </div>
-
       <!-- Project 3 -->
        <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
          <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
@@ -314,7 +250,6 @@
          </div>
          <h3 class="text-xl font-semibold mt-5">Neural Network</h3>
        </div>
-
       <!-- Project 4 -->
        <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
          <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
@@ -327,7 +262,6 @@
        </div>
          <h3 class="text-xl font-semibold"> AI Chat Bot</h3>
        </div>
-
       <!-- Project 5 -->
        <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
          <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
@@ -340,7 +274,6 @@
        </div>
          <h3 class="text-xl font-semibold">Machine Learning Algorithms</h3>
        </div>
-
       <!-- Project 5 -->
        <div class="bg-[#1e1e1e] rounded-2xl shadow-md hover:scale-[1.02] transition-transform group relative overflow-hidden p-4 md:p-6" data-aos="fade-up">
          <div class="relative w-full aspect-[16/9] md:aspect-[4/3]">
@@ -353,13 +286,9 @@
        </div>
          <h3 class="text-xl font-semibold">Machine Learning Algorithms</h3>
        </div>
-
     </div>
     </div>
 </section>
-
-
-
 
 <!-- CERTIFICATE BELT -->
 <section id="certificates" class="w-full py-16 flex flex-col items-center bg-[#181818]">
@@ -372,31 +301,37 @@
           </div>
         </div>
         <ul class="splide__list">
+          <!--CERT 1-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/python_hackerrank_cert.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python HackerRank</div>
             <a href="" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
           </li>
+          <!--CERT 2-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/genAI_LLM.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Generative AI and LLMs</div>
             <a href="https://coursera.org/share/a119faaedd095eedbbef2c305b5b5a51" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
           </li>
+          <!--CERT 3-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/intro_NN.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Intro to Neural Networks (PyTorch)</div>
             <a href="https://coursera.org/share/4172f8ef208fec35070e27ef270411d8" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
           </li>
+          <!--CERT 4-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/Db_SQL.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Databases and SQL for Data Science</div>
             <a href="https://coursera.org/share/2a91e25e49e1d4060c54b5748e35eacc" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
           </li>
+          <!--CERT 5-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/pp_ds.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python Project for Data Science</div>
             <a href="https://coursera.org/share/ef4efb610ddca59c816acfad05500d4a" target="_blank" class="text-[#00ffe7] text-sm hover:underline">View Certificate</a>
           </li>
+          <!--CERT 6-->
           <li class="splide__slide flex flex-col items-center bg-[#232323] rounded-xl p-4 shadow-lg">
             <img src="imgdumpster/pdsai.png" class="w-44 h-32 object-contain mb-3"/>
             <div class="text-lg font-semibold mt-2 mb-1 text-[#e0e0e0]">Python for Data Science, AI & Development</div>
@@ -408,10 +343,6 @@
   </div>
 </section>
 
-
-
-
-
 <!-- CONNECT FORM -->
   <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-14 sm:px-20 md:px-32 py-12 text-center snap-start text-[#e0e0e0]">
     <h2 class="text-3xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">Let's Connect!</h2>
@@ -422,12 +353,6 @@
       <button type="submit" class="bg-[#00ffe7] text-black px-6 py-3 rounded hover:bg-white transition">Send Message</button>
     </form>
   </section>
-
-
-
-
-
-
 
   <!-- FOOTER -->
 <footer class="bg-black w-full py-6 flex flex-col items-center justify-center">
@@ -449,10 +374,6 @@
 </footer>
 
 
-
-
-
-
   <!-------------------- JS STUFF -------------------->
   <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
@@ -467,9 +388,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="contact.js"></script>
   <script src="menu_buttons.js"></script>
-
-
-
+  <script src="loading_screen.js"></script>
 
 </body>
 </html>

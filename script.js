@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  // Loading screen logic
+  // LOADING SCREEN LOGIC
   const loader = document.getElementById('loader');
 
   // After 3.8 seconds, hide the loader, i.e. page is ready
@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init(); // animation happens on all scroll
 
 
+  // CERTIFICATE SCROLL SECTION
   new Splide('.splide', {
     type   : 'loop',
     perPage: 3,
