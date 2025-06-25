@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const myTags = [
     'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Flask', 'MongoDB',
     'Python', 'Java', 'SQL', 'Bootstrap', 'UML', 'Git', 'GitHub',
+    'Docker', 'BeautifulSoup', 'Requests', 'GCP', 'MinIO',
     'Machine Learning', 'TensorFlow', 'PyTorch', 'NumPy',
     'Pandas', 'Matplotlib', 'SciPy', 'Sklearn'
   ];
