@@ -1,0 +1,12 @@
+# ignoring old or test files
+
+
+.idea/
+
+me.js
+
+old_code
+
+test.html
+
+old_effects.html

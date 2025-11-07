@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // constants below in the array
   const myTags = [
     'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Flask', 'MongoDB',
-    'Python', 'Java', 'SQL', 'Bootstrap', 'UML', 'Git', 'GitHub',
-    'Docker', 'BeautifulSoup', 'Requests', 'GCP', 'MinIO',
+    'Python', 'Java', 'Node.js', 'R', 'SQL', 'Bootstrap', 'UML', 'Git',
+    'Docker', 'Kubernetes', 'BeautifulSoup', 'Requests', 'GCP', 'MinIO',
     'Machine Learning', 'TensorFlow', 'PyTorch', 'NumPy',
     'Pandas', 'Matplotlib', 'SciPy', 'Sklearn'
   ];
