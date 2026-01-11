@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
-  const finalText = "Patrick, Software Developer";
+  const finalText = "Patrick, Software Engineer";
   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}<>?/|";
   const decodeEl = document.getElementById('decode-text');
   let decoded = "";
