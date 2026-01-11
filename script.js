@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  // Add top-nav padding class so content isn't hidden behind navbar
+  document.body.classList.add('has-top-nav');
+
   // LOADING SCREEN LOGIC
   const loader = document.getElementById('loader');
 
@@ -45,25 +48,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 3800);
 
+  // SMOOTH SCROLL FOR TOP NAV LINKS (account for fixed navbar height)
+  const nav = document.querySelector('nav');
+  const navHeight = nav ? nav.offsetHeight : 0;
+
+  document.querySelectorAll('a.nav-icon[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+
   AOS.init(); // animation happens on all scroll
 
+  // CERTIFICATE "CARD SWAP" MOTION ONE ENTRANCE
+  const certCards = document.querySelectorAll('#certSwap .cert-slide');
+  if (certCards.length) {
+    // Motion One entrance only (hover handled by CSS flip)
+    if (window.motion && window.motion.animate) {
+      const { animate } = window.motion;
 
-  // CERTIFICATE SCROLL SECTION
-  new Splide('.splide', {
-    type   : 'loop',
-    perPage: 3,
-    gap    : '2rem',
-    autoplay: true,
-    interval: 4500,    // time in ms between slides
-    pauseOnHover: true,
-    pagination: true,
-    arrows: false,
-    breakpoints: {
-      640: { perPage: 1 },
-      1024: { perPage: 2 },
-      1280: { perPage: 3 },
-    },
-  }).mount();
+      // Staggered entrance on load
+      certCards.forEach((card, index) => {
+        animate(
+          card,
+          { opacity: [0, 1], y: [30, 0] },
+          { duration: 0.5, delay: index * 0.08, easing: 'ease-out' }
+        );
+      });
+
+    }
+  }
 
 
 });
