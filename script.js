@@ -3,21 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate Tag Sphere
   // constants below in the array
-  const myTags = [
-    'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Flask', 'MongoDB',
-    'Python', 'Java', 'Node.js', 'R', 'SQL', 'UML', 'Git',
-    'Docker', 'Kubernetes', 'BeautifulSoup', 'Requests', 'GCP', 'MinIO',
-    'Machine Learning', 'TensorFlow', 'PyTorch', 'NumPy',
-    'Pandas', 'Matplotlib', 'SciPy', 'Sklearn'
-  ];
+const myTags = [
+  'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind',
+  'Python', 'Java', 'C++', 'R', 'SQL',
+  'Node.js', 'Express', 'NestJS', 'Next.js', 'React', 'Flask',
+  'PostgreSQL', 'Firestore', 'MongoDB', 'Supabase',
+  'Docker', 'GCP', 'Heroku', 'Vercel', 'Backblaze B2',
+  'GitHub Actions', 'CI/CD', 'Git',
+  'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib',
+  'Stripe API', 'JWT', 'BeautifulSoup', 'Selenium'
+];
 
 
   // the container where the sphere will appear
   const container = document.getElementById("skillSphere");
 
-  // if container exists do thios
+  // if container exists do this
   if (container && container.offsetWidth > 0 && container.offsetHeight > 0) {
-    // tagclouyd is the functionm for this library
+    // tagcloud is the functionm for this library
     TagCloud("#skillSphere", myTags, {
       radius: 250,
       maxSpeed: "normal",
